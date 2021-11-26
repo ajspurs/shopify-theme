@@ -441,9 +441,9 @@ h6,
 .h6 {
   color: rgba(var(--color-foreground), 0.75);
   -webkit-margin-before: 1.67em;
-          margin-block-start: 1.67em;
+  margin-block-start: 1.67em;
   -webkit-margin-after: 1.67em;
-          margin-block-end: 1.67em;
+  margin-block-end: 1.67em;
 }
 
 blockquote {
@@ -1131,9 +1131,9 @@ summary::-webkit-details-marker {
 
 .media > img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center center;
-     object-position: center center;
+  object-position: center center;
   transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -1200,7 +1200,7 @@ deferred-media {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
 }
 
 .button:focus-visible {
@@ -1217,6 +1217,18 @@ deferred-media {
 
 .button:focus:not(:focus-visible) {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
+}
+
+.button::-moz-selection,
+.shopify-challenge__button::-moz-selection,
+.customer button::-moz-selection {
+  background-color: rgba(var(--color-button-text), 0.3);
+}
+
+.button::-moz-selection,
+.shopify-challenge__button::-moz-selection,
+.customer button::-moz-selection {
+  background-color: rgba(var(--color-button-text), 0.3);
 }
 
 .button::-moz-selection, .shopify-challenge__button::-moz-selection, .customer button::-moz-selection {
@@ -1319,7 +1331,7 @@ deferred-media {
 
 details[open] > .share-button__fallback {
   -webkit-animation: animateMenuOpen var(--duration-default) ease;
-          animation: animateMenuOpen var(--duration-default) ease;
+  animation: animateMenuOpen var(--duration-default) ease;
 }
 
 .share-button__button:hover {
@@ -1415,7 +1427,7 @@ details[open] > .share-button__fallback {
 .customer select {
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   background-color: transparent;
   border: 0.1rem solid transparent;
   border-radius: 0;
@@ -1539,6 +1551,46 @@ details[open] > .share-button__fallback {
 .field__input::-webkit-search-cancel-button,
 .customer .field input::-webkit-search-cancel-button {
   display: none;
+}
+
+.field__input::-webkit-input-placeholder,
+.customer .field input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.field__input::-moz-placeholder,
+.customer .field input::-moz-placeholder {
+  opacity: 0;
+}
+
+.field__input:-ms-input-placeholder,
+.customer .field input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.field__input::-ms-input-placeholder,
+.customer .field input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.field__input::-webkit-input-placeholder,
+.customer .field input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.field__input::-moz-placeholder,
+.customer .field input::-moz-placeholder {
+  opacity: 0;
+}
+
+.field__input:-ms-input-placeholder,
+.customer .field input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.field__input::-ms-input-placeholder,
+.customer .field input::-ms-input-placeholder {
+  opacity: 0;
 }
 
 .field__input::-webkit-input-placeholder, .customer .field input::-webkit-input-placeholder {
@@ -1694,7 +1746,7 @@ input[type="checkbox"] {
   flex-grow: 1;
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
 }
 
 .quantity__button {
@@ -1925,9 +1977,9 @@ input[type="checkbox"] {
 
   .header--middle-left {
     grid-template-areas: "heading navigation icons";
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto auto auto;
     -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    column-gap: 2rem;
   }
 
   .header--top-center {
@@ -2106,7 +2158,7 @@ menu-drawer + .header__search {
 details[open] > .search-modal {
   opacity: 1;
   -webkit-animation: animateMenuOpen var(--duration-default) ease;
-          animation: animateMenuOpen var(--duration-default) ease;
+  animation: animateMenuOpen var(--duration-default) ease;
 }
 
 details[open] .modal-overlay {
@@ -2204,7 +2256,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   opacity: 1;
   transform: translateY(0);
   -webkit-animation: animateMenuOpen var(--duration-default) ease;
-          animation: animateMenuOpen var(--duration-default) ease;
+  animation: animateMenuOpen var(--duration-default) ease;
   z-index: 1;
 }
 
@@ -2235,6 +2287,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 
   .header--middle-left .header__inline-menu {
     margin-left: 0;
+    text-align: center;
   }
 }
 
@@ -2256,6 +2309,10 @@ details[open] > .header__icon--menu .icon-hamburger {
   transition: -webkit-text-decoration var(--duration-short) ease;
   transition: text-decoration var(--duration-short) ease;
   transition: text-decoration var(--duration-short) ease, -webkit-text-decoration var(--duration-short) ease;
+  transition: text-decoration var(--duration-short) ease,
+    -webkit-text-decoration var(--duration-short) ease;
+  transition: text-decoration var(--duration-short) ease,
+    -webkit-text-decoration var(--duration-short) ease;
 }
 
 .header__menu-item:hover span {
